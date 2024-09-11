@@ -1,6 +1,13 @@
 #include "Soundex.h"
 #include <cctype>
 
+char getSoundexCodedigit1(char c);
+char getSoundexCodedigit2(char c);
+char getSoundexCodedigit3(char c);
+char getSoundexCodedigit4(char c);
+char getSoundexCodedigit5(char c);
+char getSoundexCodedigit6(char c);
+
 char getSoundexCode(char c) {
     c = toupper(c);
     return getSoundexCodedigit1(c);
