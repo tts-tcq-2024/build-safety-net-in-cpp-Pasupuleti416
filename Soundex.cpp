@@ -3,16 +3,81 @@
 
 char getSoundexCode(char c) {
     c = toupper(c);
-    switch (c) {
-        case 'B': case 'F': case 'P': case 'V': return '1';
-        case 'C': case 'G': case 'J': case 'K': case 'Q': case 'S': case 'X': case 'Z': return '2';
-        case 'D': case 'T': return '3';
-        case 'L': return '4';
-        case 'M': case 'N': return '5';
-        case 'R': return '6';
-        default: return '0'; // For A, E, I, O, U, H, W, Y
+    return getSoundexCodedigit1(c);
+}
+
+char getSoundexCodedigit1(char c)
+{
+    if (c == 'B' || c == 'F' || c == 'P' || c == 'V')
+    {
+        return '1';
+    }
+    else
+    {
+       return getSoundexCodedigit2(char c); 
     }
 }
+
+char getSoundexCodedigit2(char c)
+{
+    if (c == 'C' || c == 'G' || c == 'J' || c == 'K' || c == 'Q' || c == 'S' || c == 'X' || c == 'Z')
+    {
+        return '2';
+    }
+    else
+    {
+       return getSoundexCodedigit3(char c); 
+    }
+}
+
+char getSoundexCodedigit3(char c)
+{
+    if (c == 'C' || c == 'G')
+    {
+        return '3';
+    }
+    else
+    {
+       return getSoundexCodedigit4(char c); 
+    }
+}
+
+char getSoundexCodedigit4(char c)
+{
+    if (c == 'L')
+    {
+        return '4';
+    }
+    else
+    {
+       return getSoundexCodedigit5(char c); 
+    }
+}
+
+char getSoundexCodedigit5(char c)
+{
+    if (c == 'M' || c == 'N')
+    {
+        return '5';
+    }
+    else
+    {
+       return getSoundexCodedigit6(char c); 
+    }
+}
+
+char getSoundexCodedigit6(char c)
+{
+    if (c == 'R')
+    {
+        return '6';
+    }
+    else
+    {
+       return '0'; 
+    }
+}
+    
 
 std::string generateSoundex(const std::string& name) {
     if (name.empty()) return "";
