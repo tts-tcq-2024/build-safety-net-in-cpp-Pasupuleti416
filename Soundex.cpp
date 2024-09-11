@@ -21,7 +21,7 @@ char getSoundexCodedigit1(char c)
     }
     else
     {
-       return getSoundexCodedigit2(char c); 
+       return getSoundexCodedigit2(c); 
     }
 }
 
@@ -33,7 +33,7 @@ char getSoundexCodedigit2(char c)
     }
     else
     {
-       return getSoundexCodedigit3(char c); 
+       return getSoundexCodedigit3(c); 
     }
 }
 
@@ -45,7 +45,7 @@ char getSoundexCodedigit3(char c)
     }
     else
     {
-       return getSoundexCodedigit4(char c); 
+       return getSoundexCodedigit4(c); 
     }
 }
 
@@ -57,7 +57,7 @@ char getSoundexCodedigit4(char c)
     }
     else
     {
-       return getSoundexCodedigit5(char c); 
+       return getSoundexCodedigit5(c); 
     }
 }
 
@@ -69,7 +69,7 @@ char getSoundexCodedigit5(char c)
     }
     else
     {
-       return getSoundexCodedigit6(char c); 
+       return getSoundexCodedigit6(c); 
     }
 }
 
