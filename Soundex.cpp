@@ -1,87 +1,75 @@
 #include "Soundex.h"
 #include <cctype>
 
-char getSoundexCodedigit1(char c);
-char getSoundexCodedigit2(char c);
-char getSoundexCodedigit3(char c);
-char getSoundexCodedigit4(char c);
-char getSoundexCodedigit5(char c);
-char getSoundexCodedigit6(char c);
+char output;
+
+void getSoundexCodedigit1(char c);
+void getSoundexCodedigit2(char c);
+void getSoundexCodedigit3(char c);
+void getSoundexCodedigit4(char c);
+void getSoundexCodedigit5(char c);
+void getSoundexCodedigit6(char c);
 
 char getSoundexCode(char c) {
     c = toupper(c);
-    return getSoundexCodedigit1(c);
+    getSoundexCodedigit1(c);
+    getSoundexCodedigit2(c);
+    getSoundexCodedigit3(c);
+    getSoundexCodedigit4(c);
+    getSoundexCodedigit5(c);
+    getSoundexCodedigit6(c);
+    return output;
 }
 
-char getSoundexCodedigit1(char c)
+void getSoundexCodedigit1(char c)
 {
     if (c == 'B' || c == 'F' || c == 'P' || c == 'V')
     {
-        return '1';
-    }
-    else
-    {
-       return getSoundexCodedigit2(c); 
+        output = '1';
     }
 }
 
-char getSoundexCodedigit2(char c)
+void getSoundexCodedigit2(char c)
 {
     if (c == 'C' || c == 'G' || c == 'J' || c == 'K' || c == 'Q' || c == 'S' || c == 'X' || c == 'Z')
     {
-        return '2';
-    }
-    else
-    {
-       return getSoundexCodedigit3(c); 
+        output = '2';
     }
 }
 
-char getSoundexCodedigit3(char c)
+void getSoundexCodedigit3(char c)
 {
     if (c == 'C' || c == 'G')
     {
-        return '3';
-    }
-    else
-    {
-       return getSoundexCodedigit4(c); 
+        output = '3';
     }
 }
 
-char getSoundexCodedigit4(char c)
+void getSoundexCodedigit4(char c)
 {
     if (c == 'L')
     {
-        return '4';
-    }
-    else
-    {
-       return getSoundexCodedigit5(c); 
+        output = '4';
     }
 }
 
-char getSoundexCodedigit5(char c)
+void getSoundexCodedigit5(char c)
 {
     if (c == 'M' || c == 'N')
     {
-        return '5';
-    }
-    else
-    {
-       return getSoundexCodedigit6(c); 
+        output = '5';
     }
 }
 
-char getSoundexCodedigit6(char c)
+void getSoundexCodedigit6(char c)
 {
     if (c == 'R')
     {
-        return '6';
+        output = '6';
     }
     else
     {
-       return '0'; 
+       output = '0'; 
     }
 }
     
