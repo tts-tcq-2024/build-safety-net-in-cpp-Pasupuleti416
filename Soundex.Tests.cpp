@@ -10,15 +10,15 @@ TEST(SoundexTest, HandlesSingleCharacter) {
     EXPECT_EQ(generateSoundex("A"), "A000");
 }
 
-TEST(SoundexTest, HandlesSingleCharacter) {
+TEST(SoundexTest, HandlesDigit1character) {
     EXPECT_EQ(generateSoundex("Robert"), "R163");
 }
 
-TEST(SoundexTest, HandlesSingleCharacter) {
+TEST(SoundexTest, HandlesDigit2Character) {
     EXPECT_EQ(generateSoundex("Ashcroft"), "A261");
 }
 
-TEST(SoundexTest, HandlesSingleCharacter) {
+TEST(SoundexTest, HandlesDigit5Character) {
     EXPECT_EQ(generateSoundex("Honeyman"), "H555");
 }
 
