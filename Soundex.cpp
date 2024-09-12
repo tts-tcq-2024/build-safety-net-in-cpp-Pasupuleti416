@@ -75,7 +75,7 @@ void getSoundexCodedigit6(char c)
 
 std::string appendLetterDigits(const std::string& soundexAppend,const std::string& nameAppend)
 {
-    char prevCode = getSoundexCode(letterDigits[0]);
+    char prevCode = getSoundexCode(nameAppend[0]);
     for (size_t i = 1; i < nameAppend.length() && soundexAppend.length() < 4; ++i) {
         char code = getSoundexCode(nameAppend[i]);
         if (code != '0' && code != prevCode) {
