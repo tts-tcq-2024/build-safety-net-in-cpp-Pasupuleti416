@@ -73,25 +73,25 @@ void getSoundexCodedigit6(char c)
     }
 }
 
-std::string appendLetterDigits(const std::string& letterDigits)
+std::string appendLetterDigits(const std::string& soundexAppend,const std::string& nameAppend)
 {
     char prevCode = getSoundexCode(letterDigits[0]);
-    for (size_t i = 1; i < letterDigits.length() && soundex.length() < 4; ++i) {
-        char code = getSoundexCode(letterDigits[i]);
+    for (size_t i = 1; i < nameAppend.length() && soundexAppend.length() < 4; ++i) {
+        char code = getSoundexCode(nameAppend[i]);
         if (code != '0' && code != prevCode) {
-            soundex += code;
+            soundexAppend += code;
             prevCode = code;
         }
     }
 
-    return soundex;
+    return soundexAppend;
 }
 
 std::string generateSoundex(const std::string& name) {
     if (name.empty()) return "";
 
     std::string soundex(1, toupper(name[0]));
-    appendLetterDigits(name);
+    soundex = appendLetterDigits(soundex,name);
     /*char prevCode = getSoundexCode(name[0]);
 
     for (size_t i = 1; i < name.length() && soundex.length() < 4; ++i) {
