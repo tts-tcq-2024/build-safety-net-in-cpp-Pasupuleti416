@@ -114,3 +114,10 @@ std::string generateSoundex(const std::string& name) {
 
     return soundex;
 }
+
+void main()
+{
+    std::cout<<"Enter the string";
+    std::cin>>name;
+    generateSoundex(name);
+}
