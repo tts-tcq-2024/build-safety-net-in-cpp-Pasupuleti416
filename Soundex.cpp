@@ -15,7 +15,7 @@ char getSoundexCode(char c) {
     return getSoundexCodedigit1(c);
 }
 
-void getSoundexCodedigit1(char c)
+char getSoundexCodedigit1(char c)
 {
     if (c == 'B' || c == 'F' || c == 'P' || c == 'V')
     {
@@ -27,7 +27,7 @@ void getSoundexCodedigit1(char c)
     }
 }
 
-void getSoundexCodedigit2(char c)
+char getSoundexCodedigit2(char c)
 {
     if (c == 'C' || c == 'G' || c == 'J' || c == 'K' || c == 'Q' || c == 'S' || c == 'X' || c == 'Z')
     {
@@ -39,7 +39,7 @@ void getSoundexCodedigit2(char c)
     }
 }
 
-void getSoundexCodedigit3(char c)
+char getSoundexCodedigit3(char c)
 {
     if (c == 'C' || c == 'G')
     {
@@ -52,7 +52,7 @@ void getSoundexCodedigit3(char c)
     }
 }
 
-void getSoundexCodedigit4(char c)
+char getSoundexCodedigit4(char c)
 {
     if (c == 'L')
     {
@@ -64,7 +64,7 @@ void getSoundexCodedigit4(char c)
     }
 }
 
-void getSoundexCodedigit5(char c)
+char getSoundexCodedigit5(char c)
 {
     if (c == 'M' || c == 'N')
     {
@@ -76,7 +76,7 @@ void getSoundexCodedigit5(char c)
     }
 }
 
-void getSoundexCodedigit6(char c)
+char getSoundexCodedigit6(char c)
 {
     if (c == 'R')
     {
