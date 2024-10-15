@@ -117,6 +117,7 @@ std::string generateSoundex(const std::string& name) {
 
 void main()
 {
+    string name;
     std::cout<<"Enter the string";
     std::cin>>name;
     generateSoundex(name);
